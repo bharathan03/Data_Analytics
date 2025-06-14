@@ -1,5 +1,8 @@
 # Hospitaliy Revenue Analytics
-This project showcases the details of hospitality domain using hospitality concepts in hotel business  
+A Power BI dashboard analyzing hotel bookings, revenue, occupancy, cancellations, and price metrics
+
+Roles and Tools: Complete data cleaning and structuring in Power Query, DAX formulas in Power Pivot, and visuals built in Power BI Desktop
+Learning Outcome: Learnt how to create KPIs, set up time-intelligence calculations, and highlight business opportunities through data.
 
 This file contains all the meta information regarding the columns described in the CSV files. There are 5 CSV files:
 1. dim_date
