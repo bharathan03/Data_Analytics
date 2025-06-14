@@ -54,5 +54,23 @@ Column Description for fact_bookings:
 12. revenue_realized: This column represents the final amount of money that goes to the hotel based on booking status. If the booking status is cancelled, then 40% of the revenue generated is deducted and the remaining is refunded to the customer. If the booking status is Checked Out/No show, then full revenue generated will goes to hotels.
 
 
+Measures created and used in the dashboard: 
+1. Total Bookings = COUNT('Bookings'[BookingID])
+  - Counts how many bookings were made
+2. Total Revenue = SUM('Bookings'[Revenue])
+  - Adds up revenue from all bookings
+3. Average Daily Rate = DIVIDE([Total Revenue], [Total Bookings])
+  - Divides revenue by total bookings
+4. Occupancy Rate = DIVIDE([Total Bookings], [Total Rooms] * DISTINCTCOUNT('Bookings'[Date]))
+  - Calculates how full the hotel was: number of booked rooms out of total rooms available over time
+5. Cancellation Rate = DIVIDE(CALCULATE([Total Bookings], 'Bookings'[Status] = "Cancelled"), [Total Bookings])
+  -  Finds the share of bookings that were cancelled
+6. RevPAR = [Average Daily Rate] * [Occupancy Rate]
+  - RevPAR = [Average Daily Rate] * [Occupancy Rate]
+7. Bookings by Channel = COUNTROWS('Bookings')
+  - Bookings by Channel = COUNTROWS('Bookings')
+
+
+
 
 
